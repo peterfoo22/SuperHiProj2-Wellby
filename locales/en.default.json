@@ -52,12 +52,12 @@
     "card": {
       "options": "{{ optionCount }} options",
       "more_info": "More Info"
+    },
+    "form": {
+      "quantity": "Quantity",
+      "submit": "Add to Cart",
+      "sold_out": "Sold out"
     }
-  },
-  "form": {
-    "quantity": "Quantity",
-    "submit": "Add to Cart",
-    "sold_out": "Sold out"
   }
 }
 

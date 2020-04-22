@@ -7,5 +7,5 @@ Shopify - https://project2-wellby.myshopify.com/
 4/21/2020- Setup of project.  Started doing the traslation file in the locale folder.  Used JSON notation to creat the file.
 
 
-4/22/2020- Finished translation file.  Created pages and added them through admin pages to our footer menu. Started to review linklist objects and how they
-can be used in theme development.
+4/22/2020- Finished translation file.  Created pages in admin section to our footer menu.  Using linklists objects to output menu.
+Created footer menu using translation and social share links.
