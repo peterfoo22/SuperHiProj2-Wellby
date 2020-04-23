@@ -8,4 +8,11 @@ Shopify - https://project2-wellby.myshopify.com/
 
 
 4/22/2020- Finished translation file.  Created pages in admin section to our footer menu.  Using linklists objects to output menu.
-Created footer menu using translation and social share links.
+Created footer menu using translation and social share links.  Created collection page using admin section in Shopify Admin.
+
+4/23/2020-  Created Product card using snippets for "addtocart" form. Setup the elements and information needed, and used jQuery to
+add functionality to the add to cart buttons and clicks.  Used JQuery to listen to the clicks and whether we should able or disable
+the counter clicker, and quanitity in the form.
+
+4/24/2020- Used Jquery to dynmically adapt and validate to the logic in the addtocart form based on product quanitity .
+
