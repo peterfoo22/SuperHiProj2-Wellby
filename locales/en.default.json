@@ -23,16 +23,16 @@
     "button": {
       "count_html": "Cart (<span class=\"js-cart-item-count\">{{ itemCount }}</span>)",
       "close": "Close"
-    }
-  },
-  "empty": {
+    },
+    "empty": {
     "title": "Your cart is empty",
     "button": "Keep Shopping"
-  },
-  "filled": {
-    "title": "Your Cart",
-    "subtotal": "Subtotal",
-    "button": "Checkout"
+    },
+    "filled": {
+      "title": "Your Cart",
+      "subtotal": "Subtotal",
+      "button": "Checkout"
+    }
   },
   "footer": {
     "list": {

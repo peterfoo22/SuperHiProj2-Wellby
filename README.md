@@ -14,5 +14,7 @@ Created footer menu using translation and social share links.  Created collectio
 add functionality to the add to cart buttons and clicks.  Used JQuery to listen to the clicks and whether we should able or disable
 the counter clicker, and quanitity in the form.
 
-4/24/2020- Used Jquery to dynmically adapt and validate to the logic in the addtocart form based on product quanitity .
+4/24/2020- Used Jquery to dynmically adapt and validate to the logic in the addtocart form based on product quanitity . Created snippet
+of the cart contents on checkout, and created the elements. Begin style homepage through our 'application.scss.liquid file' using variables, mixins,
+and also liquid tags.
 

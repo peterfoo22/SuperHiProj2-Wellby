@@ -1,0 +1,63 @@
+// put your styles here
+$headline-font: "Georgia", 'Times New Roman', Times, serif;
+$text-font: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+$black: #000000;
+$white: #FFFFFF;
+
+$light-black: #333333;
+
+$text-color: #555555;
+$text-color-white: #CCCCCC;
+$text-color-light: #707070;
+$text-color-light-white: #AAAAAA;
+
+$gold: #BEA482;
+
+$background-color: #F7F2EA;
+$header-background-color:#EEE600;
+$footer-background-color:#F4EDE6;
+$border-color: rgba(0,0,0,0.15);
+$border-color-white: rgba(255, 255, 255, 0.15);
+
+$standard-border: 1px solid $border-color;
+$standard-border-white: 1px solid $border-color-white;
+
+$line-global:20px;
+$gutter-global: $line-global;
+$offset-global: $line-global*2;
+
+$header-height: $line-global*4;
+
+$type-headline-lg: 50px;
+$type-headline-med: 30px;
+$type-body-med: 15px;
+$type-body-sm: 13px;
+
+$type-bold: 700;
+$type-book: 400;
+
+
+*{
+  font-family: $text-font;
+  box-sizing: border-box;
+}
+
+html,
+body{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: $black;
+  line-height: $line-global;
+}
+
+body{
+  font-size: $type-body-med;
+  background-color:#F7F2EA;
+  background-image: url('{{"background.jpg" | asset_url }}');
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
