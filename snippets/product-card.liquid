@@ -1,13 +1,19 @@
-<div class = "product-card">
-  <div class = "card-info">
+<div class = "product-card grid collapse two-columns">
+  <div class = "card-info product-info-section">
 
-   <a href="{{ product.url }}">{{ product.title }}</a>
+   <a class = "product-title" href="{{ product.url }}">
+    <h2>
+       {{ product.title }}
+      <span class = "price">{{ product.price | money }}</span>
+    </h2>
+   </a>
 
-   <span class = "price">{{ product.price | money }}</span>
     {{ product.description | strip_html | split: '.' | first | append: '.' }}
 
     {% if product.variants.size > 1 %}
-      {{'product.card.options' | t: optionCount: product.variants.size }} &mdash;
+      <span class = 'accent-color'>
+        {{'product.card.options' | t: optionCount: product.variants.size }} &mdash;
+      </span>
     {% endif %}
 
     {% if product.available % }
