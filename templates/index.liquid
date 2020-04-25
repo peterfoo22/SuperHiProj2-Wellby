@@ -6,8 +6,8 @@
 
 
   <div class="index-products wrapper">
-    {% for product in collections.frontpage.products limit:4 %}
-      {% include 'product-card' %}
+    {% for product in collections.all.products limit:4 %}
+      {% include 'product-card'  %}
     {% endfor %}
   </div>
 </div>
