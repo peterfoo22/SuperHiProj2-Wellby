@@ -18,3 +18,9 @@ the counter clicker, and quanitity in the form.
 of the cart contents on checkout, and created the elements. Begin style homepage through our 'application.scss.liquid file' using variables, mixins,
 and also liquid tags.
 
+
+4/25/2020- Adding style to the index, header and footer page. Continue sytling index and product card through our applications css file.
+Using Grid and Flexbox to Style the elements in our card.
+
+4/26/2020- Styled the product card form , and also the add to cart form.  Styled the cart when the cart has products and when the cart is empty.
+Learning use of AJAX in shopify theme.

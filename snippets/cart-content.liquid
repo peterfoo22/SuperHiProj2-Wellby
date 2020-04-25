@@ -1,21 +1,26 @@
-{% if cart.item_count > 0 %}
-  <p>{{ 'cart.filled.title' | t }}</p>
-  <form action="/cart" method="post" novalidate>
+<div class = "text-white">
 
-        {% for item in cart.items %}
+  {% if cart.item_count > 0 %}
+    <p class = "ta-center">{{ 'cart.filled.title' | t }}</p>
+    <form action="/cart" method="post" novalidate>
+        <div class = "cart-lines">
+          {% for item in cart.items %}
 
-          {% include 'line-item' %}
+            {% include 'line-item' %}
 
-        {% endfor %}
+          {% endfor %}
+        </div>
 
-    <div class = "subtotal-line">
-      <p>{{ 'cart.filled.subtotal' | t }}</p> : <span class="price">{{ cart.total_price | money }}</span>
+      <div class = "subtotal-line">
+        <p>{{ 'cart.filled.subtotal' | t }}</p>
+        <span class="price">{{ cart.total_price | money }}</span>
+      </div>
+
       <button type="submit" name="checkout">{{ 'cart.filled.button'| t }}</button>
-    </div>
-  </form>
-{% else %}
-  <p class = "cart-empty-text">{{'cart.empty.title' | t }}</p>
-  <a href="/"><{{'cart.empty.button' | t }}/a>
-  <h2>cart</h2>
-  Cart is empty
-{% endif %}
+    </form>
+  {% else %}
+    <p class = "cart-empty-text">{{'cart.empty.title' | t }}</p>
+    <a href="/"><{{'cart.empty.button' | t }}/a>
+    Cart is empty
+  {% endif %}
+</div>

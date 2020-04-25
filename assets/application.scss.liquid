@@ -39,6 +39,24 @@ $type-body-sm: 13px;
 $type-bold: 700;
 $type-book: 400;
 
+@mixin reset-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -text-align: left;
+}
+
 
 @mixin flex-space-between{
   display: flex;
@@ -117,6 +135,10 @@ h2, .h2{
 }
 
 
+h3, .h3{
+  font-size: $type-body-med;
+  line-height: $line-global;
+}
 
 h4, .h4{
   color:$light-black;
@@ -145,6 +167,32 @@ p{
   @include spaced-caps;
   color:$black;
 }
+
+button[type = "submit"],
+.button{
+
+  @include reset-input;
+  width: 100%;
+  padding: $line-global;
+  text-align:center;
+  font-size: $type-body-med;
+  line-height: $line-global;
+  background: $gold;
+  color:$white;
+
+  &:disabled{
+   opacity: 0.75;
+   cursor:not-allowed;
+   text-decoration:line-through;
+  }
+
+  &:not(:disabled):hover{
+    background: darken($gold, 10%);
+
+  }
+
+}
+
 
 //Utility classes
 
@@ -244,9 +292,10 @@ p{
   .below-title{
     max-width: 396px;
     margin: 0 auto;
-    p{
-      margin-bottom:$line-global;
-    }
+  }
+
+  .product-description{
+    margin-bottom:$line-global;
   }
 }
 
@@ -313,7 +362,56 @@ p{
 
 .variant-radio{
   @extend .visually-hidden;
+
+  & + label{
+    @include spaced-caps;
+    display: inline-block;
+    cursor:pointer;
+    padding: $line-global/5;
+    border: 1px solid transparent;
+    color: $text-color-light-white;
+  }
+
+  &:checked + label{
+    color:$white;
+    border: 1px solid $white;
+  }
+
+  &:disabled + label{
+    cursor:not-allowed;
+    text-decoration:line-through;
+    color: $text-color;
+  }
 }
+
+.quantity-button{
+  @include reset-input;
+  font-size: $line-global;
+  line-height: $line-global;
+  text-align: center;
+  font-weight: $type-bold;
+  width: $line-global;
+
+  &:disabled{
+    opacity:0.75;
+  }
+
+  &:not(disabled):hover{
+    color:$white
+  }
+}
+
+.quanitity-text{
+  display: inline-block;
+  text-align:center;
+  min-width: $line-global;
+  margin:0 $line-global/2;
+}
+
+#add-to-cart-button{
+  margin-top: $line-global
+}
+
 
 
 
@@ -369,6 +467,78 @@ p{
     display:inline-block;
   }
 }
+
+//cart page styles
+
+
+.cart-page-content{
+  background: $light-black;
+  padding:$offset-global;
+  max-width:380px;
+  margin: 0 auto;
+}
+
+
+/*shared cart styles */
+.cart-lines{
+  margin-top: $line-global;
+  border-top: $standard-border-white;
+  border-bottom: $standard-border-white;
+  padding:$line-global;
+}
+
+.cart-empty-text{
+  margin: ($line-global * 4) 0;
+}
+
+
+//line item styles
+
+.line-item{
+  @extend .text-white;
+
+  @include flex-space-between;
+
+  .line-image{
+    width:80px;
+    position:relative;
+  }
+
+  img{
+    display:block;
+    max-width: 100%;
+    height:auto;
+  }
+
+
+  .remove-line{
+    position:absolute;
+    width:$line-global;
+    height:$line-global;
+    top: ($line-global/2);
+    right: ($line-global/2);
+    display:none;
+    }
+
+    &:hover{
+      .remove-line{
+        display:block;
+      }
+    }
+
+    &:not(:first-child){
+      margin-top: $line-global;
+    }
+
+}
+
+.subtotal-line{
+  @include flex-space-between;
+  padding: $line-global;
+}
+
+
+
 
 
 
