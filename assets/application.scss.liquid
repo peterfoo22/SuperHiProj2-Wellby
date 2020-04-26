@@ -233,7 +233,16 @@ button[type = "submit"],
 .valign-center{
   display:flex;
   flex-direction: column;
-  justify-content: center;
+  //justify-content: center;
+  > * {
+    &:first-child{
+      margin-top: auto;
+    }
+
+    &:last-child{
+      margin-bottom:auto;
+    }
+  }
 }
 
 
@@ -425,6 +434,7 @@ button[type = "submit"],
   height:$header-height;
   background-color: $header-background-color;
   padding: $line-global $offset-global;
+  z-index:1;
   @include flex-space-between;
 
   .shop-link{  //nested the class inside the header global
@@ -537,6 +547,53 @@ button[type = "submit"],
   padding: $line-global;
 }
 
+
+//mini-cart styles
+
+#mini-cart{
+  position:fixed;
+  top:$header-height;
+  bottom:0;
+  right:0;
+  width:100%;
+  max-width: 380px;
+  background: $light-black;
+  display:none;
+  z-index: 1;
+
+  .mini-cart-contents{
+    overflow: auto;
+    padding: $offset-global;
+    height: 100%;
+  }
+
+}
+
+
+//cart-toggle styles
+
+html.mini-cart-open{
+  overflow: hidden;
+  #mini-cart{
+    display:block;
+  }
+
+  .cart-link{
+    .cart-text{
+      display:none
+    }
+
+    .cart-close-text{
+      display:inline-block;
+    }
+  }
+
+  main{
+    opacity:0.3;
+    pointer-events:none;
+  }
+
+}
 
 
 

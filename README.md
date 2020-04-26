@@ -24,3 +24,5 @@ Using Grid and Flexbox to Style the elements in our card.
 
 4/26/2020- Styled the product card form , and also the add to cart form.  Styled the cart when the cart has products and when the cart is empty.
 Learning use of AJAX in shopify theme.
+
+4/27/2020- Used "POST", and "GET" ajax functions from jquery to update the cart on the page.  Style our Ajax mini cart on the index page.

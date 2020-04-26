@@ -20,7 +20,6 @@
     </form>
   {% else %}
     <p class = "cart-empty-text">{{'cart.empty.title' | t }}</p>
-    <a href="/"><{{'cart.empty.button' | t }}/a>
-    Cart is empty
+    <a href="/" class= 'button js-keep-shopping'>Keep Shopping</a>
   {% endif %}
 </div>
