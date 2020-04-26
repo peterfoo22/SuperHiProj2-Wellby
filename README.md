@@ -26,3 +26,12 @@ Using Grid and Flexbox to Style the elements in our card.
 Learning use of AJAX in shopify theme.
 
 4/27/2020- Used "POST", and "GET" ajax functions from jquery to update the cart on the page.  Style our Ajax mini cart on the index page.
+Last changes and QAing the website, reponsive web fonts, and also updating the 404 page, and the about us page styles.
+
+Project Concepts Learned:
+
+-Importing products
+-Modular components
+-Dynamic content with pages and linklists
+-Advanced SCSS features
+-Shopify AJAX API
